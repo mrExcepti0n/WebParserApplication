@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="0.14.0-alpha-788" />
+    <PackageReference Include="AngleSharp.Js" Version="0.13.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.17" />
+    <PackageReference Include="PuppeteerSharp" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>
