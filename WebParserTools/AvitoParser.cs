@@ -76,6 +76,7 @@ namespace WebParserTools
                                "--disable-setuid-sandbox",
                                "--ignore-certificate-errors"};
 
+
             if (proxyServerAddress != null)
             {
                 optionArgs.Add("--proxy-server=" + proxyServerAddress);
@@ -103,7 +104,6 @@ namespace WebParserTools
                     }
                 }
             }
-
             return result;
         }
 
