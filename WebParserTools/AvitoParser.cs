@@ -75,7 +75,7 @@ namespace WebParserTools
                                "--disable-infobars",
                                "--disable-setuid-sandbox",
                                "--ignore-certificate-errors"};
-                               
+
 
             if (proxyServerAddress != null)
             {
@@ -104,7 +104,6 @@ namespace WebParserTools
                     }
                 }
             }
-
             return result;
         }
 
