@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using WebParserTools.Model;
 
-namespace WebParserTools
+namespace WebParserTools.Export.Abstractions
 {
     public interface IParseExport
     {
-        void OnParseEnd(Object sender, List<PostInformation> postInformations);
+        void OnParseComplete(Object sender, ParseCompletedEventArgs eventArgs);
 
 
         void SaveToSource(List<PostInformation> postInformation);

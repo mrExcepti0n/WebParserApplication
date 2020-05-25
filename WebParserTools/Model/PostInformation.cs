@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebParserTools
+namespace WebParserTools.Model
 {
     public class PostInformation
     {

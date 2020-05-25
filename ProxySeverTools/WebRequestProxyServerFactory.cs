@@ -10,6 +10,7 @@ namespace ProxySeverTools
     {
         public Task<List<ProxyServer>> GetProxyServers(string targetSite)
         {
+            //todo not working not static content
             var url = "http://free-proxy.cz/ru/proxylist/country/all/https/ping/level1";
             var web = new HtmlWeb();
             var doc = web.Load(url);

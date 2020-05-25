@@ -13,7 +13,7 @@ namespace ProxySeverTools
             Host = host;
             Port = port;
 
-            NeedAuthentication = login == null ? false : true;
+            NeedAuthentication = login != null;
 
             Login = login;
             Password = password;

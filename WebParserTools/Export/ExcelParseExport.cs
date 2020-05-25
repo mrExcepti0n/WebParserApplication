@@ -1,10 +1,11 @@
-﻿using OfficeOpenXml;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using OfficeOpenXml;
+using WebParserTools.Export.Abstractions;
+using WebParserTools.Model;
 
-namespace WebParserTools
+namespace WebParserTools.Export
 {
     public class ExcelParseExport : ParseExport
     {

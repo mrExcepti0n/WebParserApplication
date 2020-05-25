@@ -11,6 +11,8 @@ using System;
 using WebParserTools;
 using Tesseract;
 using System.Drawing;
+using WebParserTools.Avito;
+using WebParserTools.Export;
 
 namespace WebParserApplication
 {
@@ -18,9 +20,14 @@ namespace WebParserApplication
     {
         static async Task Main(string[] args)
         {
-            var proxyServerFactory = new HardSetAddressProxyServerFactory();
+            var proxyServerFactory = new WebRequestProxyServerFactory();
+            var avitoParser = new AvitoParser(proxyServerFactory, "https://www.avito.ru/rostov-na-donu/lichnye_veschi");
+
+
+
             var parseExport = new ExcelParseExport(@"avitoResults.xlsx");
-            var avitoParser = new AvitoParser(proxyServerFactory, "https://www.avito.ru/rostov-na-donu/lichnye_veschi", parseExport);
+            avitoParser.ParseCompleted += parseExport.OnParseComplete;
+
             await avitoParser.Parse();
         }
 
