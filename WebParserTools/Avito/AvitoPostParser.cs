@@ -69,7 +69,7 @@ namespace WebParserTools.Avito
 
         private async Task<string> GetPhoneNumber(PuppeteerSharp.Page page)
         {
-            string phoneImage = await page.WaitForSelectorAsync("div.popup-content img").EvaluateFunctionAsync<string>("element => element.src");
+            string phoneImage = await page.WaitForSelectorAsync("div[data-marker='phone-popup/content'] img[data-marker='phone-popup/phone-image']").EvaluateFunctionAsync<string>("element => element.src");
 
             string imageStr = phoneImage.Substring(phoneImage.IndexOf(",") + 1).Trim();
             byte[] imageByte = System.Convert.FromBase64String(imageStr);
